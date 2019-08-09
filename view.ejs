@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Authentication</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<%if(loggedIn){%>
+	<div class="topnav">
+	  <a class = "active" href="/">Home</a>
+	  <a href = "/logout">Log Out</a>
+	</div>
+<%}else{%>
+	<div class="topnav">
+	  <a class="active" href="/">Home</a>
+	  <a href="/signup">Sign Up</a>
+	  <a href="/signin">Sign In</a>
+	</div>
+<%}%><BR><BR>
+<center>
+<iframe src=<%=episode.link%> scrolling="no" frameborder="0" width="700" height="430" allowfullscreen="true" 
+webkitallowfullscreen="true" mozallowfullscreen="true"></iframe><BR><BR>
+<%if(loggedIn){%>
+	<a href = <%=episode.downloadLink%> style = "color:green;text-decoration:none;">CLICK HERE TO DOWNLOAD</a>
+<%}else{%>
+	<a href = "/signup" style = "color:green;text-decoration:none;">Sign Up</a> or
+	<a href = "/signin" style = "color:green;text-decoration:none;">Sign In</a>
+	 to see download links
+<%}%><BR><BR>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://watchdrstone-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><BR>
+ <footer style = "height:49px;background-color:#333;color:grey;font-size:15px;"><BR>
+<a href = "/" style = "color:green;text-decoration:none;">WatchDrStone</a>&nbsp;
+Copyrights and trademarks for the anime, and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the Copyright Law
+</footer>                           
+</center>
+</form>
+</body>
+</html>

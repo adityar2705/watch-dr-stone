@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Authentication</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<center>
+<%if(loggedIn){%>
+	<div class="topnav">
+	  <a class = "active" href="/">Home</a>
+	  <a href = "/logout">Log Out</a>
+	</div>
+<%}else{%>
+	<div class="topnav">
+	  <a class="active" href="/">Home</a>
+	  <a href="/signup">Sign Up</a>
+	  <a href="/signin">Sign In</a>
+	</div>
+<%}%>
+<BR><BR>
+<iframe width="420" height="250"
+src="https://www.youtube.com/embed/KnEMDDMYYfU">
+</iframe>&emsp;&emsp;
+<img src = "https://res.cloudinary.com/dnwlq4tga/image/upload/v1562506860/drstone.jpg" style = "width:200px;height:250px;"><BR><BR>
+<P style = "color:grey;font-family:courier;">Dr. Stone is a Japanese manga series written by Riichiro Inagaki and illustrated by Boichi,<BR>
+serialized in Weekly Shōnen Jump since March 6, 2017 with the individual chapters collected <BR>
+and published by Shueisha into ten tankōbon volumes as of April 2019.<BR>
+ Viz Media licensed the manga in North America.<BR><BR>
+One fateful day, all of humanity was petrified by a blinding flash of light. After several<BR>
+ millennia, high schooler Taiju awakens and finds himself lost in a world of statues.<BR>
+ However, he’s not alone! His science-loving friend Senku’s been up and running for a few months<BR>
+ and he's got a grand plan in mind—to kickstart civilization with the power of science!
+<BR><BR><BR>
+ Join Discord : <a href = "https://discord.gg/4Qdv6CX" style = "text-decoration:none;color:blue;">https://discord.gg/4Qdv6CX</a><BR>
+ </P>
+ <P style = "color:lightgreen"><BR>
+ IMDb : 8.6/10 &emsp;&emsp;
+ Status : Ongoing</P><BR><BR>
+<%episodes.forEach(function(episode){%>
+	<a href = /watch/episode/<%=episode.number%> style = "color:#453a5f;text-decoration:none;">Watch Dr.Stone (Subbed) - <%=episode.name%> - <%=episode.number%> Online </a><BR><BR><BR><BR>
+<%});%>
+<p style = "color:#005b96;font-family:courier;font-size:20px;">
+SUMMARY STATS<br><br>
+<B>Watching : </b><%=body.watching%><BR><BR>
+<B>Completed : </b><%=body.completed%><BR><BR>
+<B>Dropped : </b><%=body.dropped%><BR><BR>
+<B>Total : </b><%=body.total%><BR><BR>
+</p><BR>
+<footer style = "height:49px;background-color:#333;color:grey;font-size:15px;"><BR>
+<a href = "/" style = "color:green;text-decoration:none;">WatchDrStone</a>&nbsp;
+Copyrights and trademarks for the anime, and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the Copyright Law
+</footer>
+</center>
+</form>     
+</body>
+</html>
