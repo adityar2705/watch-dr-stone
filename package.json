@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Watch Dr Stone Online Subbed",
   "main": "main.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.2",
