@@ -11,6 +11,7 @@ var request = require("request");
 var cookieParser = require('cookie-parser');
 var jwt = require('jsonwebtoken');
 var expressValidator = require("express-validator");
+var port = process.env.PORT || 3000;
 var app = express();
 
 //connecting to mongodb
@@ -180,6 +181,6 @@ app.get("/watch/episode/:number",function(req,res){
 
 
 //start app on port 3000, with a display message
-app.listen(process.env.PORT || 3000,function(){
+app.listen(port,function(){
 	console.log("Server started on port 3000..");
 });
