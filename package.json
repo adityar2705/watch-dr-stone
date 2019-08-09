@@ -7,6 +7,10 @@
     "node": "8.6.0",
     "npm":"6.10.3"
   },
+  "repository":{
+    type:"git",
+    url:"https://github.com/heroku/watch-dr-stone"
+  },
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.2",
