@@ -31,5 +31,5 @@
      "start": "node main.js"
   },
   "author": "Aditya Ranjan",
-  "license": "ISC"
+  "license": "MIT"
 }
