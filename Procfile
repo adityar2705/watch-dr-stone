@@ -1,1 +1,1 @@
-web: node Desktop/main.js
+web: node main.js
