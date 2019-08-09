@@ -4,7 +4,8 @@
   "description": "Watch Dr Stone Online Subbed",
   "main": "main.js",
   "engines": {
-    "node": "8.6.0"
+    "node": "8.6.0",
+    "npm":"6.10.3"
   },
   "dependencies": {
     "bcrypt": "^3.0.4",
