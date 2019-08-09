@@ -29,7 +29,7 @@
   },
   "devDependencies": {},
   "scripts": {
-     "start": "node main.js"
+     "start": "node Desktop\main.js"
   },
   "author": "Aditya Ranjan",
   "license": "MIT"
